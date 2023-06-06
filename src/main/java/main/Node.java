@@ -4,6 +4,8 @@ import java.util.List;
 
 public class Node {
   private static Node LEADER;
+  public static Node CURRENT_NODE;
+  private boolean isAlive;
   private Node prev;
   private Node next;
   private Priority priority;
@@ -13,6 +15,8 @@ public class Node {
     this.prev = prev;
     this.next = next;
     this.priority = priority;
+    this.isAlive = true;
+    CURRENT_NODE = this;
   }
 
   public void setOrder(List<Node> order) {
@@ -33,5 +37,13 @@ public class Node {
 
   public Priority getPriority() {
     return priority;
+  }
+
+  public boolean isAlive() {
+    return isAlive;
+  }
+
+  public void setAlive(boolean alive) {
+    isAlive = alive;
   }
 }

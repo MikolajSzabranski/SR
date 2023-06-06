@@ -3,7 +3,7 @@ package main;
 import java.util.ArrayList;
 
 public class Ring {   //TODO - może statyczna klasa nawet, zobaczymy
-  private static ArrayList<Node> NODES;
+  public static ArrayList<Node> NODES;
   private static Priority TOP_PRIORITY;
 
   public void setPriorityAndOrderToNodes(ArrayList<Node> newOrder, Priority topPriority) {
